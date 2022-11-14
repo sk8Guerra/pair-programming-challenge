@@ -13,7 +13,7 @@ describe('Features/Policies', () => {
   test('should correctly display a list of policies', async () => {
     render(<Policies />);
     await waitFor(() =>
-      screen.getByText(`${validCustomer.firstName} ${validCustomer.lastName}`)
+      screen.getByText(`${validCustomer.firstName}`, { exact: false })
     );
   });
 

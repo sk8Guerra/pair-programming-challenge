@@ -1,32 +1,8 @@
 # Feather Take Home Assessment
 
-Thank you for applying at Feather and taking the time to do this home assessment.
+Thank you for applying at Feather.
 
-The goal of this project is to let you **show off your coding and problem-solving skills**, on a task that resembles the kind of work you’ll be doing with us.
-
-This coding challenge applies to **frontend, backend, and full-stack roles**. Depending on the position you are applying for, you can focus on your specific area.  
-
-You can spend as little or as much time as you like on this project. We've added some initial boilerplate to help you get started, but **feel free to refactor every part of this app as you may seem fit**.
-
-1. Start by reading the [Engineering challenge](#Engineering-challenge) for the position you've applied for and don't forget about the **Acceptance criteria** to have a clear idea of the requirements.
-2. Use the [Getting started](#Getting-started) guide to set up a local version of the project on your machine.
-3. Take a look at the [Data structure](#Data-structure) and [API](#API) to know what the data looks like.
-4. Finish by answering a [couple of questions](#General-questions) about the project. You can answer them on this very same file.
-
-## Engineering challenge
-
-We've prepared several different user stories to work on. Depending on what position you applied to, pick one of them:  
-- [Backend](./backend-readme.md)
-- [Frontend](./frontend-readme.md)
-- [Full Stack](./full-stack-readme.md)
-
-
-## Task requirements
-
-- Make sure your feature **works as expected**
-- Your code is **easy to understand** and follows best practices
-- The project **runs with one command,** and without any external configuration
-- **Your code has tests** to make sure the functionalities work as expected
+We'll use this project on our pair programming interview. Follow the instructions below to get started.
 
 ## Getting started
 
@@ -60,7 +36,7 @@ The API should be running on `http://localhost:4000`
 If you want to install new dependencies, you'll have to do it inside the docker container. To do that, you can use the following command:
 
 ```
-# On the root directory of the project  
+# On the root directory of the project
 docker compose exec {backend OR frontend} yarn add {the_name_of_the_package}
 ```
 
@@ -80,16 +56,16 @@ Feel free to update or add more endpoints to accommodate or improve your solutio
 
 ### Policy
 
-| fields         | type                            | comment                                       |
-| -------------- | ------------------------------- | --------------------------------------------- |
-| id             | string                          | Used to identify the policy                   |
-| customer       | [Customer](#Customer)           | Object holding the customer's informations    |
-| provider       | string                          | Name of the provider (Allianz, AXA…)          |
-| insuranceType  | [InsuranceType](#InsuranceType) | Type of the insurance (Liability, Household…) |
-| status         | [PolicyStatus](#PolicyStatus)   | Status of the insurance (Active, Cancelled)   |
-| startDate      | date                            | Date when the policy should start             |
-| endDate        | date                            | Date when the policy ends                     |
-| createdAt      | date                            | Date when the record was created              |
+| fields        | type                            | comment                                       |
+| ------------- | ------------------------------- | --------------------------------------------- |
+| id            | string                          | Used to identify the policy                   |
+| customer      | [Customer](#Customer)           | Object holding the customer's informations    |
+| provider      | string                          | Name of the provider (Allianz, AXA…)          |
+| insuranceType | [InsuranceType](#InsuranceType) | Type of the insurance (Liability, Household…) |
+| status        | [PolicyStatus](#PolicyStatus)   | Status of the insurance (Active, Cancelled)   |
+| startDate     | date                            | Date when the policy should start             |
+| endDate       | date                            | Date when the policy ends                     |
+| createdAt     | date                            | Date when the record was created              |
 
 ### Customer
 
@@ -107,15 +83,3 @@ Feel free to update or add more endpoints to accommodate or improve your solutio
 ### PolicyStatus
 
 `PolicyStatus` can be of `ACTIVE`, `PENDING`, `CANCELLED` and `DROPPED_OUT`
-
-## General questions
-
-- How much time did you spend working on the solution?
-- What’s the part of the solution you are most proud of?
-
-  _You can share a code snippet here if you feel like it_
-
-- If you had more time, what other things you would like to do?
-- Do you have any feedback regarding this coding challenge?  
-
-  _Is the initial setup working?, is something missing?, any other comments?_  
