@@ -2,7 +2,7 @@ import { PrismaClient, Prisma } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const userData: Prisma.CustomerCreateInput[] = [
+export const userData: Prisma.CustomerCreateInput[] = [
   {
     firstName: 'Cyrillus',
     lastName: 'Biddlecombe',
