@@ -1,4 +1,4 @@
-# Feather Take Home Assessment
+# Feather pair programming interview
 
 Thank you for applying at Feather.
 
