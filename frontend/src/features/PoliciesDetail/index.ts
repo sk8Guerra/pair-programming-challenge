@@ -1,0 +1,1 @@
+export { PoliciesDetail } from './PoliciesDetail';

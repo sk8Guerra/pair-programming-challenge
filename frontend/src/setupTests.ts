@@ -4,7 +4,15 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import { server } from 'mocks/server';
+const originalEnv = process.env;
 
 beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
+beforeEach(() => {
+  jest.resetModules();
+  process.env = { ...originalEnv };
+});
+afterEach(() => {
+  process.env = originalEnv;
+  server.resetHandlers();
+});
 afterAll(() => server.close());

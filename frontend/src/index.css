@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .with-border {
+        @apply border-black;
+        @apply border-2;
+        @apply p-1;
+    }
+}

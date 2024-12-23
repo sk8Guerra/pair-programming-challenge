@@ -1,3 +1,6 @@
-import { policyMockHandler } from 'features/Policies/Policies.mocks';
+import {
+  policyMockHandler,
+  policyDetailMockHandler,
+} from 'features/Policies/Policies.mocks';
 
-export const handlers = [policyMockHandler];
+export const handlers = [policyMockHandler, policyDetailMockHandler];

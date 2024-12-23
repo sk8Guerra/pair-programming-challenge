@@ -24,11 +24,12 @@ enum InsuranceType {
 }
 
 model Customer {
-  id            String      @id @default(uuid()) @db.Uuid
-  firstName     String      @db.VarChar(255)
-  lastName      String      @db.VarChar(255)
-  dateOfBirth   DateTime
-  policies      Policy[]
+  id          String   @id @default(uuid()) @db.Uuid
+  firstName   String   @db.VarChar(255)
+  lastName    String   @db.VarChar(255)
+  email       String?  @unique
+  dateOfBirth DateTime
+  policies    Policy[]
 }
 
 model Policy {
@@ -40,5 +41,6 @@ model Policy {
   status        PolicyStatus
   startDate     DateTime
   endDate       DateTime?
+  price         Float?
   createdAt     DateTime      @default(now())
 }

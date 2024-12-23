@@ -9,6 +9,7 @@ interface Customer {
   firstName: string;
   id: string;
   lastName: string;
+  email: string;
 }
 
 export interface Policy {
@@ -19,4 +20,23 @@ export interface Policy {
   provider: Provider;
   startDate: Date;
   status: PolicyStatus;
+  price: number | null;
 }
+
+export interface PageInfo {
+  page: number;
+  limit: number;
+  totalItems: number;
+  totalPages: number;
+  hasNextPage: boolean;
+  hasPrevPage: boolean;
+}
+
+export type QueryParams = Partial<Pick<PageInfo, 'page' | 'limit'>>;
+
+export type PoliciesResponse = {
+  items: Policy[];
+  pageInfo: PageInfo;
+};
+
+export interface PolicyResponse extends Policy {}
